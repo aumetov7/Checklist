@@ -1,32 +1,22 @@
 //
-//  AddItemViewController.swift
+//  AllListsViewController.swift
 //  Checklist
 //
-//  Created by Акбар Уметов on 4/8/22.
+//  Created by Акбар Уметов on 9/8/22.
 //
 
 import UIKit
 
-class AddItemViewController: UITableViewController {
+class AllListsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.largeTitleDisplayMode = .never
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    @IBAction func cancel() {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func done() {
-        navigationController?.popViewController(animated: true)
     }
 
     // MARK: - Table view data source
