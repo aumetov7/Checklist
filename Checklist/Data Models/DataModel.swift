@@ -18,6 +18,12 @@ class DataModel {
         }
     }
     
+    func sortChecklist() {
+        lists.sort { list1, list2 in
+            return list1.name.localizedStandardCompare(list2.name) == .orderedAscending
+        }
+    }
+    
     // MARK: - Data saving
     
     func documentsDirectory() -> URL {
@@ -50,6 +56,7 @@ class DataModel {
             
             do {
                 lists = try decoder.decode([Checklist].self, from: data)
+                sortChecklist()
             } catch {
                 print("Decoding Error: \(error.localizedDescription)")
             }
