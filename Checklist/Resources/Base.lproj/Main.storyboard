@@ -245,6 +245,7 @@
         <!--Add Item-->
         <scene sceneID="yK7-tW-xdU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeR-Ih-GnY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zew-le-cPE" customClass="ItemDetailViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="TKN-1q-jsX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -280,6 +281,72 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="5OK-zS-cfn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Ipm-Ff-ZNx">
+                                        <rect key="frame" x="0.0" y="86" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ipm-Ff-ZNx" id="kTX-y1-oXK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h7-Qb-bbS">
+                                                    <rect key="frame" x="16" y="11.5" width="284" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tA4-hl-bcH">
+                                                    <rect key="frame" x="308" y="6" width="51" height="31.5"/>
+                                                    <color key="onTintColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="shouldRemindToggled:" destination="PeR-Ih-GnY" eventType="valueChanged" id="hw0-V5-Ocp"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="tA4-hl-bcH" secondAttribute="trailing" constant="18" id="6Cr-rA-Ggx"/>
+                                                <constraint firstItem="6h7-Qb-bbS" firstAttribute="centerY" secondItem="tA4-hl-bcH" secondAttribute="centerY" id="7Xb-I5-lAq"/>
+                                                <constraint firstItem="tA4-hl-bcH" firstAttribute="leading" secondItem="6h7-Qb-bbS" secondAttribute="trailing" constant="8" id="9Kz-Rr-gkx"/>
+                                                <constraint firstAttribute="bottom" secondItem="tA4-hl-bcH" secondAttribute="bottom" constant="6.5" id="DPT-YG-Mz9"/>
+                                                <constraint firstItem="6h7-Qb-bbS" firstAttribute="leading" secondItem="kTX-y1-oXK" secondAttribute="leadingMargin" id="PEs-0h-JgS"/>
+                                                <constraint firstItem="tA4-hl-bcH" firstAttribute="top" secondItem="kTX-y1-oXK" secondAttribute="top" constant="6" id="Vh6-z6-ggF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="KPX-ax-sxt">
+                                        <rect key="frame" x="0.0" y="130" width="375" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KPX-ax-sxt" id="NmP-GA-bxl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AG-ig-NEs">
+                                                    <rect key="frame" x="16" y="16" width="105" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UYp-Me-96s">
+                                                    <rect key="frame" x="129" y="4" width="230" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="230" id="Fc7-OT-Hud"/>
+                                                        <constraint firstAttribute="height" constant="44" id="onk-VI-573"/>
+                                                    </constraints>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UYp-Me-96s" firstAttribute="top" secondItem="NmP-GA-bxl" secondAttribute="top" constant="4" id="JUp-be-Kse"/>
+                                                <constraint firstItem="UYp-Me-96s" firstAttribute="leading" secondItem="0AG-ig-NEs" secondAttribute="trailing" constant="8" id="bmz-Ms-GXD"/>
+                                                <constraint firstItem="0AG-ig-NEs" firstAttribute="centerY" secondItem="UYp-Me-96s" secondAttribute="centerY" id="fws-5u-kLX"/>
+                                                <constraint firstAttribute="bottom" secondItem="UYp-Me-96s" secondAttribute="bottom" constant="4" id="gNz-zN-8hD"/>
+                                                <constraint firstAttribute="trailing" secondItem="UYp-Me-96s" secondAttribute="trailing" constant="16" id="iYJ-Ug-KNb"/>
+                                                <constraint firstItem="0AG-ig-NEs" firstAttribute="leading" secondItem="NmP-GA-bxl" secondAttribute="leadingMargin" id="ti1-06-vwo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="zew-le-cPE" id="0Mw-qR-a1b"/>
@@ -299,11 +366,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="datePicker" destination="UYp-Me-96s" id="WbS-FK-VyC"/>
                         <outlet property="doneBarButton" destination="2aV-N2-XTC" id="54b-64-sfX"/>
+                        <outlet property="shouldRemindSwitch" destination="tA4-hl-bcH" id="6wK-9j-Iz2"/>
                         <outlet property="textField" destination="x8I-tx-bCN" id="5qp-Qc-oYB"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PeR-Ih-GnY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2023" y="79"/>
         </scene>
